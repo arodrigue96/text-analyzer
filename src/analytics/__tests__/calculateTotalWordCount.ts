@@ -1,6 +1,6 @@
 import { calculateTotalWordCount } from "../index.js";
 
-const text = "";
+const text = ``;
 const expectedWords = 0;
 const totalWords = calculateTotalWordCount(text);
 
