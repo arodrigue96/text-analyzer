@@ -7,3 +7,11 @@ export const calculateParagraphsTotal = (text: string): number => {
 
   return paragraphCount;
 };
+
+export const calculateTotalWordCount = (text: string): number => {
+  if (text === "") {
+    return 0;
+  }
+
+  return text.split(" ").length;
+};
