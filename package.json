@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
+    "build:dev": "tsc -w",
     "start": "serve public"
   },
   "keywords": [],
