@@ -15,3 +15,11 @@ export const calculateTotalWordCount = (text: string): number => {
 
   return text.trim().split(/\s+/).length;
 };
+
+export const getNumberOfCharacters = (text: string): number => {
+  if (text.length === 0) {
+    return 0;
+  }
+
+  return text.split("").length;
+};
