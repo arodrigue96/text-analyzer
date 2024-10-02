@@ -9,9 +9,9 @@ export const calculateParagraphsTotal = (text: string): number => {
 };
 
 export const calculateTotalWordCount = (text: string): number => {
-  if (text === "") {
+  if (text.length === 0) {
     return 0;
   }
 
-  return text.split(" ").length;
+  return text.trim().split(/\s+/).length;
 };
