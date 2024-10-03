@@ -1,8 +1,10 @@
+import { get } from "http";
 import {
   calculateWordsTotal,
   calculateParagraphsTotal,
   calculateCharactersTotal,
   calculateShortWordsTotal,
+  getWordList,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -133,4 +135,5 @@ export const analyzeText = (text: string): void => {
   renderWordsTotal(calculateWordsTotal(text));
   renderCharactersTotal(calculateCharactersTotal(text));
   renderShortWordsTotal(calculateShortWordsTotal(text, 4));
+  renderShortWordsList(getWordList([text]));
 };
