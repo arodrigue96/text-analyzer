@@ -37,3 +37,9 @@ export const calculateShortWordsTotal = (text: string, length = 4): number => {
 
   return filteredWords;
 };
+
+export const getWordList = (list: string[]): string => {
+  const words = list.filter((word) => word.length > 0);
+
+  return words.join(",");
+};
