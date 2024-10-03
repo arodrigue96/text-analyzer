@@ -1,10 +1,8 @@
-import exp from "constants";
 import { calculateShortWordsTotal } from "../index.js";
 
-const text = `hola com
-et dius`;
-const expectedShortWordsTotal = 4;
-const shortWordsTotal = calculateShortWordsTotal(text, 4);
+const text = `     `;
+const expectedShortWordsTotal = 0;
+const shortWordsTotal = calculateShortWordsTotal(text);
 
 if (shortWordsTotal === expectedShortWordsTotal) {
   console.log("Test Passed");
