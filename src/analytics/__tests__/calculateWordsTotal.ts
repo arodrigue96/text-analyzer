@@ -1,8 +1,8 @@
-import { calculateTotalWordCount } from "../index.js";
+import { calculateWordsTotal } from "../index.js";
 
 const text = ``;
 const expectedWords = 0;
-const totalWords = calculateTotalWordCount(text);
+const totalWords = calculateWordsTotal(text);
 
 if (totalWords === expectedWords) {
   console.log("Test Passed");
