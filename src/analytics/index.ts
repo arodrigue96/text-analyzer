@@ -3,12 +3,12 @@ export const calculateParagraphsTotal = (text: string): number => {
     return 0;
   }
 
-  let paragraphCount = text.split("\n\n").length;
+  let paragraphTotal = text.split("\n\n").length;
 
-  return paragraphCount;
+  return paragraphTotal;
 };
 
-export const calculateTotalWordCount = (text: string): number => {
+export const calculateWordsTotal = (text: string): number => {
   if (text.length === 0) {
     return 0;
   }
@@ -16,7 +16,7 @@ export const calculateTotalWordCount = (text: string): number => {
   return text.trim().split(/\s+/).length;
 };
 
-export const getNumberOfCharacters = (text: string): number => {
+export const calculateCharactersTotal = (text: string): number => {
   if (text.length === 0) {
     return 0;
   }
@@ -24,7 +24,7 @@ export const getNumberOfCharacters = (text: string): number => {
   return text.split("").length;
 };
 
-export const getNumberOfShortWords = (text: string, length: 4) => {
+export const calculateShortWordsTotal = (text: string, length: 4) => {
   if (text.length === 0) {
     return 0;
   }
