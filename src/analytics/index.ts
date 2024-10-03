@@ -37,3 +37,39 @@ export const calculateShortWordsTotal = (text: string, length = 4): number => {
 
   return filteredWords;
 };
+
+export const getWordList = (list: string[]): string => {
+  const words = list.filter((word) => word.length > 0);
+
+  return words.join(",");
+};
+
+export const findPalindromWords = (text: string): string[] => {
+  const minimumPalindromWordLength = 2;
+
+  const words = text.trim().toLowerCase().split(/\s+/);
+  const palindromWords = words.filter(
+    (word) =>
+      word.length > minimumPalindromWordLength &&
+      word === word.split("").reverse().join("")
+  );
+
+  return palindromWords;
+};
+
+export const getWordFrecuencyCount = (
+  text: string,
+  frequenceWord: string
+): number => {
+  if (frequenceWord === "") {
+    return 0;
+  }
+
+  const wordCount = text
+    .split(/\s+/)
+    .filter(
+      (word) => word.toLowerCase() === frequenceWord.toLowerCase()
+    ).length;
+
+  return wordCount;
+};
