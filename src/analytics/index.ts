@@ -24,12 +24,16 @@ export const calculateCharactersTotal = (text: string): number => {
   return text.split("").length;
 };
 
-export const calculateShortWordsTotal = (text: string, length: 4) => {
+export const calculateShortWordsTotal = (text: string, length = 4): number => {
   if (text.length === 0) {
     return 0;
   }
 
   const words = text.trim().split(/\s+/);
 
-  return words.filter((word) => word.length <= 4).length;
+  const filteredWords = words.filter(
+    (word) => word.length <= length && word.length > 0
+  ).length;
+
+  return filteredWords;
 };
