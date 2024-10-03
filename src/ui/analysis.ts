@@ -1,10 +1,11 @@
-import { get } from "http";
 import {
   calculateWordsTotal,
   calculateParagraphsTotal,
   calculateCharactersTotal,
   calculateShortWordsTotal,
   getWordList,
+  findPalindromWords,
+  getWordFrecuencyCount,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -115,7 +116,7 @@ const listenFrequenciesChanges = (text: string): void => {
         const word = (event.target as HTMLInputElement).value;
 
         // Implement the frequency calculation here and delete this 0
-        const frequency = 0;
+        const frequency = getWordFrecuencyCount(text, word);
 
         frequenciesContainer.querySelector(
           `.word-${index + 1}-frequency`
