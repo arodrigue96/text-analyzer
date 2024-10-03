@@ -43,3 +43,16 @@ export const getWordList = (list: string[]): string => {
 
   return words.join(",");
 };
+
+export const findPalindromWords = (text: string): string[] => {
+  const minimumPalindromWordLength = 2;
+
+  const words = text.trim().toLowerCase().split(/\s+/);
+  const palindromWords = words.filter(
+    (word) =>
+      word.length > minimumPalindromWordLength &&
+      word === word.split("").reverse().join("")
+  );
+
+  return palindromWords;
+};
