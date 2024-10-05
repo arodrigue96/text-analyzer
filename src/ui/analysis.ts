@@ -138,10 +138,12 @@ export const analyzeText = (text: string): void => {
   const shortWordsTotal = calculateShortWordsTotal(text);
   const shortWords = getShortWords(text);
   const shortWordsList = getWordList(shortWords);
+  const palindromWords = findPalindromWords(text).join(", ");
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
   renderCharactersTotal(charactersTotal);
   renderShortWordsTotal(shortWordsTotal);
   renderShortWordsList(shortWordsList);
+  renderPalindromes(palindromWords);
 };
