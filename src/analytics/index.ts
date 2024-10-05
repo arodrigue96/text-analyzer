@@ -95,3 +95,11 @@ export const getReversedWords = (text: string): string => {
 
   return text.split("").reverse().join("");
 };
+
+export const getReversedText = (text: string): string => {
+  if (text.length === 0) {
+    return "";
+  }
+
+  return text.split(/\s+/).reverse().join(" ");
+};
