@@ -11,6 +11,7 @@ import {
   getReversedWords,
   getReversedText,
   getForbiddenWords,
+  getCamelCaseText,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -146,6 +147,7 @@ export const analyzeText = (text: string): void => {
   const palindromWords = findPalindromWords(text).join(", ");
   const reversedWords = getReversedWords(text);
   const reversedText = getReversedText(text);
+  const camelCase = getCamelCaseText(text);
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
@@ -155,4 +157,5 @@ export const analyzeText = (text: string): void => {
   renderPalindromes(palindromWords);
   renderReversedWords(reversedWords);
   renderReversedText(reversedText);
+  renderCamelCase(camelCase);
 };
