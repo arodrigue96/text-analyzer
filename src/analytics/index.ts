@@ -13,7 +13,12 @@ export const calculateWordsTotal = (text: string): number => {
     return 0;
   }
 
-  return text.trim().split(/\s+/).length;
+  const wordsTotal = text
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length > 0).length;
+
+  return wordsTotal;
 };
 
 export const calculateCharactersTotal = (text: string): number => {
