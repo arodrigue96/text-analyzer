@@ -145,3 +145,13 @@ export const getCamelCaseText = (text: string): string => {
 
   return modifiedWords.join("");
 };
+
+export const getKebabCaseText = (text: string): string => {
+  if (text.length === 0) {
+    return "";
+  }
+
+  const words = text.toLowerCase().trim().split(/\s+/);
+
+  return words.join("-");
+};
