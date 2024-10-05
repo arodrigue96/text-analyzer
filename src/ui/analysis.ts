@@ -13,6 +13,7 @@ import {
   getForbiddenWords,
   getCamelCaseText,
   getKebabCaseText,
+  getSnakeCaseText,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -150,6 +151,7 @@ export const analyzeText = (text: string): void => {
   const reversedText = getReversedText(text);
   const camelCase = getCamelCaseText(text);
   const kebabCase = getKebabCaseText(text);
+  const snakeCase = getSnakeCaseText(text);
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
@@ -161,4 +163,5 @@ export const analyzeText = (text: string): void => {
   renderReversedText(reversedText);
   renderCamelCase(camelCase);
   renderKebabCase(kebabCase);
+  renderSnakeCase(snakeCase);
 };
