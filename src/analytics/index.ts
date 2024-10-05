@@ -25,17 +25,18 @@ export const calculateCharactersTotal = (text: string): number => {
 };
 
 export const calculateShortWordsTotal = (text: string, length = 4): number => {
+  text.trim();
   if (text.length === 0) {
     return 0;
   }
 
-  const words = text.trim().split(/\s+/);
+  const words = text.split(/\s+/);
 
-  const filteredWords = words.filter(
+  const shortWords = words.filter(
     (word) => word.length <= length && word.length > 0
-  ).length;
+  );
 
-  return filteredWords;
+  return shortWords.length;
 };
 
 export const getWordList = (list: string[]): string => {
