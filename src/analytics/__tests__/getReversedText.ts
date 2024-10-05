@@ -1,4 +1,3 @@
-import exp from "constants";
 import { getReversedText } from "../index.js";
 
 const text = "Hola como te llamas";
