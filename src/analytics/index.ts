@@ -131,3 +131,17 @@ export const getForbiddenWords = (
 
   return censoredText;
 };
+
+export const getCamelCaseText = (text: string): string => {
+  if (text.length === 0) {
+    return "";
+  }
+
+  const words = text.trim().split(/\s+/);
+
+  const modifiedWords = words.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+
+  return modifiedWords.join("");
+};
