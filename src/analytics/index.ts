@@ -60,6 +60,10 @@ export const getWordList = (words: string[]): string => {
 };
 
 export const findPalindromWords = (text: string): string[] => {
+  if (text.length === 0) {
+    return [];
+  }
+
   const minimumPalindromWordLength = 2;
 
   const words = text.trim().toLowerCase().split(/\s+/);
