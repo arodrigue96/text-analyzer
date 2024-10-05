@@ -31,6 +31,7 @@ a {
 
 h2 {
   margin-top: 0;
+  font-size: 20px;
 }
 
 ul {
@@ -71,6 +72,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: underline;
 }
 
 .analysis {
