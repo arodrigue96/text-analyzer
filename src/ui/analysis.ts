@@ -9,6 +9,7 @@ import {
   getWordFrecuencyCount,
   getShortWords,
   getReversedWords,
+  getReversedText,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -142,6 +143,7 @@ export const analyzeText = (text: string): void => {
   const shortWordsList = getWordList(shortWords);
   const palindromWords = findPalindromWords(text).join(", ");
   const reversedWords = getReversedWords(text);
+  const reversedText = getReversedText(text);
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
@@ -150,4 +152,5 @@ export const analyzeText = (text: string): void => {
   renderShortWordsList(shortWordsList);
   renderPalindromes(palindromWords);
   renderReversedWords(reversedWords);
+  renderReversedText(reversedText);
 };
