@@ -17,11 +17,7 @@ export const calculateWordsTotal = (text: string): number => {
 };
 
 export const calculateCharactersTotal = (text: string): number => {
-  if (text.length === 0) {
-    return 0;
-  }
-
-  return text.split("").length;
+  return text.length;
 };
 
 export const calculateShortWordsTotal = (text: string, length = 4): number => {
@@ -39,8 +35,8 @@ export const calculateShortWordsTotal = (text: string, length = 4): number => {
   return shortWords.length;
 };
 
-export const getWordList = (list: string[]): string => {
-  const words = list.filter((word) => word.length > 0);
+export const getWordList = (words: string[]): string => {
+  words.filter((word) => word.length > 0);
 
   return words.join(",");
 };
@@ -58,19 +54,14 @@ export const findPalindromWords = (text: string): string[] => {
   return palindromWords;
 };
 
-export const getWordFrecuencyCount = (
-  text: string,
-  frequenceWord: string
-): number => {
-  if (frequenceWord === "") {
+export const getWordFrecuencyCount = (text: string, word: string): number => {
+  if (word === "") {
     return 0;
   }
 
-  const wordCount = text
+  const wordFrecuency = text
     .split(/\s+/)
-    .filter(
-      (word) => word.toLowerCase() === frequenceWord.toLowerCase()
-    ).length;
+    .filter((word) => word.toLowerCase() === word.toLowerCase()).length;
 
-  return wordCount;
+  return wordFrecuency;
 };
