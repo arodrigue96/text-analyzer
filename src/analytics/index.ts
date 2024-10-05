@@ -1,3 +1,5 @@
+import { text } from "stream/consumers";
+
 export const calculateParagraphsTotal = (text: string): number => {
   if (text === "") {
     return 0;
@@ -154,4 +156,8 @@ export const getKebabCaseText = (text: string): string => {
   const words = text.toLowerCase().trim().split(/\s+/);
 
   return words.join("-");
+};
+
+export const getSnakeCaseText = (text: string): string => {
+  return text.toLowerCase().trim().split(/\s+/).join("_");
 };
