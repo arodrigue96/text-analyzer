@@ -108,3 +108,26 @@ export const getReversedText = (text: string): string => {
 
   return text.split(/\s+/).reverse().join(" ");
 };
+
+export const getForbiddenWords = (
+  text: string,
+  forbiddenWords: string[]
+): string => {
+  if (text.length === 0) {
+    return "";
+  }
+
+  const words = text.trim().split(/\s+/);
+
+  const censoredText = words
+    .map((word) => {
+      if (forbiddenWords.includes(word)) {
+        return "*".repeat(word.length);
+      }
+
+      return word;
+    })
+    .join(" ");
+
+  return censoredText;
+};
