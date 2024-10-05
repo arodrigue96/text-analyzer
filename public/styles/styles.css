@@ -23,6 +23,7 @@ button {
 
 input {
   padding: 5px;
+  border-color: blue;
 }
 
 a {
@@ -145,6 +146,11 @@ ul {
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+input:focus {
+  background-color: #333;
+  color: #fff;
 }
 
 input:checked + .slider {
