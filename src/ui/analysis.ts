@@ -6,6 +6,7 @@ import {
   getWordList,
   findPalindromWords,
   getWordFrecuencyCount,
+  getShortWords,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -134,12 +135,13 @@ export const analyzeText = (text: string): void => {
   const paragraphsTotal = calculateParagraphsTotal(text);
   const wordsTotal = calculateWordsTotal(text);
   const charactersTotal = calculateCharactersTotal(text);
-  const shortWords = calculateShortWordsTotal(text, 4);
-  const shortWordsList = getWordList([text]);
+  const shortWordsTotal = calculateShortWordsTotal(text);
+  const shortWords = getShortWords(text);
+  const shortWordsList = getWordList(shortWords);
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
   renderCharactersTotal(charactersTotal);
-  renderShortWordsTotal(shortWords);
+  renderShortWordsTotal(shortWordsTotal);
   renderShortWordsList(shortWordsList);
 };

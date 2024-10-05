@@ -22,6 +22,7 @@ export const calculateCharactersTotal = (text: string): number => {
 
 export const calculateShortWordsTotal = (text: string, length = 4): number => {
   text.trim();
+
   if (text.length === 0) {
     return 0;
   }
@@ -35,10 +36,27 @@ export const calculateShortWordsTotal = (text: string, length = 4): number => {
   return shortWords.length;
 };
 
-export const getWordList = (words: string[]): string => {
-  words.filter((word) => word.length > 0);
+export const getShortWords = (text: string, length = 4): string[] => {
+  text.trim();
 
-  return words.join(",");
+  if (text.length === 0) {
+    return [];
+  }
+
+  const words = text.split(/\s+/);
+  const shortWords = words.filter(
+    (word) => word.length <= length && word.length > 0
+  );
+
+  return shortWords;
+};
+
+export const getWordList = (words: string[]): string => {
+  if (words.length === 0) {
+    return "";
+  }
+
+  return words.join(", ");
 };
 
 export const findPalindromWords = (text: string): string[] => {
