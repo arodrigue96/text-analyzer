@@ -58,6 +58,7 @@ h2 {
     color: #fff;
     font-size: 0.8rem;
     font-family: Consolas, monospace;
+    padding: 10px;
   }
 }
 
@@ -80,6 +81,7 @@ h2 {
   padding: 10px;
   border: 2px solid #333;
   background-color: beige;
+  margin: 10px;
 }
 
 .frequencies-list {
