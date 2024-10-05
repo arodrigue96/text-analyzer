@@ -132,9 +132,14 @@ export const analyzeText = (text: string): void => {
 
   // Implement the rest of the analysis here
   const paragraphsTotal = calculateParagraphsTotal(text);
+  const wordsTotal = calculateWordsTotal(text);
+  const charactersTotal = calculateCharactersTotal(text);
+  const shortWords = calculateShortWordsTotal(text, 4);
+  const shortWordsList = getWordList([text]);
+
   renderParagraphsTotal(paragraphsTotal);
-  renderWordsTotal(calculateWordsTotal(text));
-  renderCharactersTotal(calculateCharactersTotal(text));
-  renderShortWordsTotal(calculateShortWordsTotal(text, 4));
-  renderShortWordsList(getWordList([text]));
+  renderWordsTotal(wordsTotal);
+  renderCharactersTotal(charactersTotal);
+  renderShortWordsTotal(shortWords);
+  renderShortWordsList(shortWordsList);
 };
