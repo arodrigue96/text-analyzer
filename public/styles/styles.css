@@ -33,6 +33,11 @@ h2 {
   margin-top: 0;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 .button {
   background-color: #666;
   color: #fff;
@@ -86,7 +91,7 @@ h2 {
 
 .frequencies-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   input {
     width: 110px;
