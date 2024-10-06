@@ -83,14 +83,17 @@ export const findPalindromWords = (text: string): string[] => {
   return palindromWords;
 };
 
-export const getWordFrecuencyCount = (text: string, word: string): number => {
-  if (word === "") {
+export const getWordFrecuencyCount = (
+  text: string,
+  wantedWord: string
+): number => {
+  if (text.length === 0) {
     return 0;
   }
 
   const wordFrecuency = text
     .split(/\s+/)
-    .filter((word) => word.toLowerCase() === word.toLowerCase()).length;
+    .filter((word) => word.toLowerCase() === wantedWord.toLowerCase()).length;
 
   return wordFrecuency;
 };
