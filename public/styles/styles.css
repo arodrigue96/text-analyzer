@@ -107,6 +107,10 @@ button:disabled {
   }
 }
 
+.container.dark {
+  background-color: darkblue !important;
+}
+
 .analysis__item {
   padding: 10px;
   border: 2px solid #333;
