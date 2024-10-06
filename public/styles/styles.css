@@ -107,10 +107,6 @@ button:disabled {
   }
 }
 
-.container.dark {
-  background-color: darkblue !important;
-}
-
 .analysis__item {
   padding: 10px;
   border: 2px solid #333;
@@ -200,4 +196,8 @@ input:checked + .slider:before {
 
 .palindromes a {
   display: block;
+}
+
+.container.dark {
+  background-color: #013a63;
 }
