@@ -48,6 +48,9 @@ ul {
   background-color: #666;
   color: #fff;
   padding: 5px 10px;
+  width: 25%;
+  position: relative;
+  right: -600px !important;
 }
 
 button:hover {
