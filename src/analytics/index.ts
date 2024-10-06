@@ -103,7 +103,17 @@ export const getReversedWords = (text: string): string => {
     return "";
   }
 
-  return text.split("").reverse().join("");
+  const words = text.split(/\s+/);
+  const reversedWords = words
+    .join(" ")
+    .split("")
+    .reverse()
+    .join("")
+    .split(" ")
+    .reverse()
+    .join(" ");
+
+  return reversedWords;
 };
 
 export const getReversedText = (text: string): string => {
