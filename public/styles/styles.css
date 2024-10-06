@@ -51,6 +51,7 @@ ul {
   width: 25%;
   position: relative;
   right: -600px !important;
+  border: 1px solid black;
 }
 
 button:hover {
