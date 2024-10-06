@@ -110,7 +110,7 @@ button:disabled {
 .analysis__item {
   padding: 10px;
   border: 2px solid #333;
-  background-color: beige;
+  background-color: white;
   margin-top: 20px;
   border-radius: 10px;
 }
