@@ -60,6 +60,12 @@ button:hover {
   color: black;
 }
 
+button:disabled {
+  opacity: 0.6;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
