@@ -48,6 +48,22 @@ ul {
   background-color: #666;
   color: #fff;
   padding: 5px 10px;
+  width: 25%;
+  position: relative;
+  right: -600px !important;
+  border: 1px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
+
+button:disabled {
+  opacity: 0.6;
+  background-color: transparent;
+  cursor: not-allowed;
 }
 
 .container {
