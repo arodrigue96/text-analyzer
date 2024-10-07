@@ -1,5 +1,3 @@
-import { text } from "stream/consumers";
-
 export const calculateParagraphsTotal = (text: string): number => {
   if (text === "") {
     return 0;
@@ -91,11 +89,11 @@ export const getWordFrecuencyCount = (
     return 0;
   }
 
-  const wordFrecuency = text
+  const wordFrecuencyTotal = text
     .split(/\s+/)
     .filter((word) => word.toLowerCase() === wantedWord.toLowerCase()).length;
 
-  return wordFrecuency;
+  return wordFrecuencyTotal;
 };
 
 export const getReversedWords = (text: string): string => {
@@ -154,11 +152,11 @@ export const getCamelCaseText = (text: string): string => {
 
   const words = text.trim().split(/\s+/);
 
-  const modifiedWords = words.map((word) => {
+  const camelCaseWords = words.map((word) => {
     return word.charAt(0).toUpperCase() + word.slice(1);
   });
 
-  return modifiedWords.join("");
+  return camelCaseWords.join("");
 };
 
 export const getKebabCaseText = (text: string): string => {
